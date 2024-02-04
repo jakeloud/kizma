@@ -1,0 +1,27 @@
+{
+  "name": "kizma",
+  "version": "0.0.1",
+  "description": "Typescript web wrapper",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build-bin": "node scripts/build.js",
+    "build": "kizma"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakeloud/kizma.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jakeloud/kizma/issues"
+  },
+  "bin": {
+    "kizma": "bin/kizma.js"
+  },
+  "homepage": "https://github.com/jakeloud/kizma#readme",
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "esbuild": "^0.20.0",
+    "typescript": "^5.3.3"
+  }
+}

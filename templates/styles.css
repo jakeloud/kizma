@@ -1,0 +1,136 @@
+@import url('https://fonts.cdnfonts.com/css/sofia-pro');
+@import url('https://fonts.cdnfonts.com/css/cubano');
+
+body {
+  background: linear-gradient(176deg,rgb(18,24,27) 50%,rgb(32,39,55) 100%);
+  min-height: 100vh;
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 840px;
+  padding: 1rem;
+
+  color: #d1d5db;
+  font-size: 1rem;
+  font-family: sofia pro,sans-serif;
+  font-weight: 500;
+}
+
+.container p {
+  color: #d1d5db;
+  font-size: 1rem;
+  font-family: sofia pro,sans-serif;
+  font-weight: 500;
+}
+
+
+.container h1 {
+  font-family: Cubano, sans-serif;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.container button {
+  font-family: Cubano, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  font-size: 1.25rem;
+
+  background: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+
+  box-shadow: 6px 6px 0 #000;
+
+  transition: all cubic-bezier(.4,0,.2,1) .3s;
+
+  cursor: pointer;
+}
+
+.container form>* {
+  margin: 1rem;
+}
+
+
+.container button:hover {
+  color: #fff;
+  box-shadow: 0 0 7px rgba(168,85,247,.5);
+  background: rgb(147 51 234);
+}
+
+.container label {
+  font-family: sofia pro, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgb(178 190 205);
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.container input:not([type]),
+.container input[type="text"],
+.container input[type="number"] {
+  background: rgba(18, 24, 27, 0.5);
+  border: none;
+  border-bottom: 4px solid rgb(168, 85, 247);
+  padding: 0.75rem;
+  font-family: sofia pro, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #fff;
+  transition: all cubic-bezier(.4,0,.2,1) .3s;
+}
+
+.container input:not([type]):focus,
+.container input[type="text"]:focus,
+.container input[type="number"]:focus {
+  outline: none;
+
+  background: rgba(28, 34, 37, 0.8);
+}
+
+.container input::-moz-placeholder,
+.container textarea::-moz-placeholder {
+  opacity: 1;
+  color: #9ca3af
+}
+
+.container input::placeholder,
+.container textarea::placeholder {
+  opacity: 1;
+  color: #9ca3af
+}
+
+
+::-webkit-scrollbar {
+  height: .375rem;
+  width: .375rem
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(18 24 27);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: .125rem;
+  background-color: rgb(69 78 86);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(108 121 131 / 0.9);
+}
