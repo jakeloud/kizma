@@ -9,6 +9,7 @@ genTemplates().then((templates) => {
   esbuild.build({
     entryPoints: ['src/kizma.js'],
     bundle: true,
+    minify: true,
     outdir: 'bin',
     platform: 'node',
     define,

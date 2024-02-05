@@ -1,0 +1,9 @@
+# source
+src
+templates
+scripts
+
+# generated/test files
+api
+public
+server.cjs

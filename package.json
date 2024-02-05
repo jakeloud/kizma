@@ -1,12 +1,12 @@
 {
   "name": "kizma",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Typescript web wrapper",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "build-bin": "node scripts/build.js",
-    "build": "kizma"
+    "test": "echo \"MonkaW\""
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
     "url": "https://github.com/jakeloud/kizma/issues"
   },
   "bin": {
-    "kizma": "bin/kizma.js"
+    "kizma": "bin/kizma.cjs"
   },
   "homepage": "https://github.com/jakeloud/kizma#readme",
   "dependencies": {
