@@ -1,6 +1,6 @@
 {
   "name": "kizma",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Typescript web wrapper",
   "main": "index.js",
   "type": "module",
