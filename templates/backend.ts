@@ -8,7 +8,6 @@ const PORT = process.env.PORT || 8080
 
 /*IMPORTS*/
 
-const rootDir = '%ROOT%'
 const STATIC_DIR = '%STATIC_DIR%'
 
 const isPromise = (v) => 

@@ -15,7 +15,6 @@ const getBackend = ({templates, schemas, inDir, outDir}) => {
   const contents = templates['backend'].content
     .replace('/*IMPORTS*/', imports)
     .replace('/*HANDLERS*/', handlers)
-    .replace('%ROOT%', inDir)
     .replace('%STATIC_DIR%', outDir)
 
   return contents
