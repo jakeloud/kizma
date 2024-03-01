@@ -14,10 +14,10 @@ const DEFAULT_OUT_DIR = 'public'
 const DEFAULT_TEMPLATES_DIR = 'templates'
 
 const gen = async (
-  inDir = DEFAULT_IN_DIR,
-  outDir = DEFAULT_OUT_DIR,
-  templatesDir = DEFAULT_TEMPLATES_DIR,
-  generateFrontend = false,
+  inDir,
+  outDir,
+  templatesDir,
+  generateFrontend,
 ) => {
   const project = await genProject(inDir)
   const templates = await genTemplates(templatesDir)
