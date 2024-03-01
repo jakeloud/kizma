@@ -53,6 +53,3 @@ const getConf = (argv) => {
 }
 
 export default getConf
-
-if (import.meta.vitest) {
-}
