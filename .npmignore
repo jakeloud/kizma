@@ -2,8 +2,10 @@
 src
 templates
 scripts
+__mocks__
 
 # generated/test files
 api
 public
 server.cjs
+coverage

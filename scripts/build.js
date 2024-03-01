@@ -1,7 +1,7 @@
 import * as esbuild from 'esbuild'
 import genTemplates from '../src/genTemplates.js'
 
-genTemplates().then((templates) => {
+genTemplates('templates').then((templates) => {
   const define = {
     CACHED_TEMPLATES: JSON.stringify(templates),
   }

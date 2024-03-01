@@ -2,15 +2,9 @@ import { readFile } from 'node:fs/promises'
 
 import genProject from './genProject.js'
 
-const TEMPLATES_DIR = 'templates'
-
 /** Templates are inlined into bin after compilation */
-const genTemplates = async () => {
-  if (typeof CACHED_TEMPLATES !== 'undefined') {
-    return CACHED_TEMPLATES
-  }
-
-  const project = await genProject(TEMPLATES_DIR)
+const genTemplates = async (templatesDir) => {
+  const project = await genProject(templatesDir)
   const templates = await Promise.all(project.map(
     ({filePath, relativePath}) => new Promise((resolve, reject) => {
       readFile(filePath, 'utf-8').then(
@@ -19,13 +13,19 @@ const genTemplates = async () => {
       )
     })
   ))
-  return templates.reduce(
+
+  const keyedTemplates = templates.reduce(
     (acc, {relativePath, content}) => Object.assign(
       acc,
       {[relativePath]: {content}}
     ),
     {}
   )
+
+  if (typeof CACHED_TEMPLATES === 'undefined') {
+    return keyedTemplates
+  }
+  return Object.assign(CACHED_TEMPLATES, keyedTemplates)
 }
 
 export default genTemplates
