@@ -22,3 +22,11 @@ add this script to package.json for compilation
 "build": "kizma"
 ```
 
+## Options
+
+pass `-f` to also generate frontend.
+Output directory can be specified with `-o` default value being `public`.
+example: `kizma -fo dist`
+
+pass `-t` to override path to templates dir, default being `templates`.
+example: `kizma -t boilerplate/backend`
