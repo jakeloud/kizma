@@ -3,6 +3,7 @@ src
 templates
 scripts
 __mocks__
+vitest.config.js
 
 # generated/test files
 api
