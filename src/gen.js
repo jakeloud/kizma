@@ -9,10 +9,6 @@ import genProject from './genProject.js'
 import genTemplates from './genTemplates.js'
 import getBackend from './getBackend.js'
 
-const DEFAULT_IN_DIR = 'api'
-const DEFAULT_OUT_DIR = 'public'
-const DEFAULT_TEMPLATES_DIR = 'templates'
-
 const gen = async (
   inDir,
   outDir,

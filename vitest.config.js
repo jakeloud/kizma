@@ -1,7 +1,6 @@
 export default {
   test: {
     globals: true,
-    includeSource: ['src/**/*.js'],
     coverage: {
       enabled: true,
       include: ['src/**/*.js'],
