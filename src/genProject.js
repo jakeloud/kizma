@@ -8,7 +8,13 @@ import { resolve, parse } from 'node:path'
  * ]
  */
 const findAllFilesInDir = async (dirName) => {
+  try {
+    await stat(resolve(dirName))
+  } catch(e) { 
+    return []
+  }
   const files = await readdir(resolve(dirName))
+
   const PromiseForFile = (file) => {
     const fn = async () => {
       const filePath = resolve(dirName, file)
