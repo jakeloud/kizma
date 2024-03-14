@@ -2,6 +2,7 @@ import { rm, mkdir, writeFile } from 'node:fs/promises'
 import { resolve, parse } from 'node:path'
 
 import * as esbuild from 'esbuild'
+import { nodeExternalsPlugin } from 'esbuild-node-externals';
 
 import getSchema from './getSchema.js'
 import getFrontend from './getFrontend.js'
@@ -88,7 +89,7 @@ const gen = async (
     bundle: true,
     platform: 'node',
     outfile: 'server.cjs',
-    external: ['dotenv'],
+    plugins: [nodeExternalsPlugin()],
   })
 
   return backendCode
